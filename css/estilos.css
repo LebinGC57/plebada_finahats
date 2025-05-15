@@ -1,0 +1,116 @@
+/* Reset básico */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; background: #000; color: #fff; }
+
+/* Hero */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('../imagenes/hola.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+.hero p  { font-size: 1.2rem; margin-bottom: 1.5rem; }
+.btn {
+  background: #FFD700;
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Catálogo */
+.catalogo {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('../imagenes/jesus.jpg') center/cover no-repeat;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #fff;
+}
+.catalogo h2 { font-size: 2rem; margin-bottom: 2rem; }
+.gorras {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.gorra {
+  background: #222;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 200px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+.gorra img {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* NFC */
+.nfc {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('../imagenes/fondocuatro.jpg') center/cover no-repeat;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #fff;
+}
+.nfc h2 { font-size: 2rem; margin-bottom: 2rem; }
+.pasos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.paso {
+  background: #1a1a1a;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  width: 100%;
+  max-width: 150px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.05);
+}
+.paso h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #FFD700;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 1.5rem;
+  color: #aaa;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.5rem; }
+  .hero p  { font-size: 1rem; }
+  .btn     { font-size: 0.9rem; padding: 0.5rem 1rem; }
+  .catalogo h2, .nfc h2 { font-size: 1.5rem; }
+  .gorras { flex-direction: column; gap: 1.5rem; }
+  .gorra  { max-width: 90%; margin: 0 auto; }
+  .pasos  { flex-direction: column; gap: 1.5rem; }
+  .paso   { max-width: 80%; margin: 0 auto; }
+}
+
+@media (max-width: 480px) {
+  .hero { height: auto; padding: 4rem 1rem; }
+  .overlay { padding: 1.5rem; }
+  .hero h1 { font-size: 2rem; }
+  .hero p  { font-size: 0.9rem; }
+  .btn     { font-size: 0.8rem; }
+  .catalogo, .nfc { padding: 2rem 1rem; }
+  .gorra, .paso { padding: 1rem; }
+}
